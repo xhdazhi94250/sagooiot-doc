@@ -30,11 +30,12 @@ OTA相关
 3. application_type: application/json
 4. 请求参数
 
-| 参数名       | 类型     | 必填 | 说明             |
-|-----------|--------|----|----------------|
-| deviceKey | string | 是  | 设备key          |
-| version   | string | 是  | 设备模块当前版本号      |
-| module    | string | 是  | OTA模块名称，类型为字符串 |
+| 参数名        | 类型     | 必填 | 说明             |
+|------------|--------|----|----------------|
+| deviceKey  | string | 是  | 设备key          |
+| strategyId | string | 是  | 批次ID           |
+| version    | string | 是  | 设备模块当前版本号      |
+| module     | string | 是  | OTA模块名称，类型为字符串 |
 
 5. 响应:
 
@@ -78,6 +79,7 @@ OTA相关
       "params": {
         "deviceKey": "deviceKey", 
         "step": "-1",
+        "desc": "升级备注信息",
         "strategy": "1"
       }
    }
@@ -90,6 +92,7 @@ OTA相关
         3. -2：下载失败。
         4. -3：校验失败。
         5. -4：烧写失败。
+    3. desc: 升级备注信息，类型为字符串
     4. strategy: OTA批次ID
 5. 响应
     ```json
